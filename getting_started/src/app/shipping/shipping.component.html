@@ -1,0 +1,8 @@
+<h3>Choose a Shipping Method</h3>
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+
+  <a [routerLink]="['/final-page']" (click)="setShippingPrice(shipping.price)">
+    {{ shipping.type }}
+  </a>
+  <span name="shippingPrice">{{ shipping.price | currency }}</span>
+</div>
